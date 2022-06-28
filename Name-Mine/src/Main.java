@@ -14,8 +14,11 @@ public class Main {
 		}
 	}
 	
-	static boolean compatable(String s1, String s2) {
-		return subSequence(s1, s2) || subSequence(s2, s1);
+	static String compatable(String s1, String s2) {
+		if( subSequence(s1, s2) || subSequence(s2, s1) )
+			return "YES";
+		else
+			return "NO";
 	}
 
 	static boolean subSequence(String superString, String subString) {
